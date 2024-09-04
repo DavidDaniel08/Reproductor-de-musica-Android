@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:contentDescription="@string/app_name"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="357dp"
+        android:layout_height="357dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:srcCompat="@drawable/portada1"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="588dp"
+        android:background="@drawable/reproducir"
+        android:backgroundTint="@color/white"
+        android:onClick="PlayPause"
+        android:text="@string/btn"
+        app:layout_constraintStart_toEndOf="@+id/btn_anterior"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_anterior"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="604dp"
+        android:background="@drawable/anterior"
+        android:backgroundTint="@color/white"
+        android:onClick="Anterior"
+        android:text="@string/btn"
+        app:layout_constraintStart_toEndOf="@+id/btn_mezclar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="604dp"
+        android:background="@drawable/siguiente"
+        android:backgroundTint="@color/white"
+        android:onClick="Siguiente"
+        android:text="@string/btn"
+        app:layout_constraintStart_toEndOf="@+id/btn_play"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_repetir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/repetir"
+        android:backgroundTint="@color/white"
+        android:text="@string/btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_siguiente"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_mezclar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="604dp"
+        android:background="@drawable/aleatorio"
+        android:backgroundTint="@color/white"
+        android:text="@string/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_bajar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bajar"
+        android:backgroundTint="@color/white"
+        android:onClick="SiguienteActivity"
+        android:text="@string/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/nombre_cancion"
+        android:layout_width="292dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/cancion_nombre"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/baja_volumen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bajavolu"
+        android:backgroundTint="@color/white"
+        android:text="@string/btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/sube_volumen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/subevolu"
+        android:backgroundTint="@color/white"
+        android:text="@string/btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <me.tankery.lib.circularseekbar.CircularSeekBar
+        android:id="@+id/circularSeekBar"
+        android:layout_width="398dp"
+        android:layout_height="406dp"
+        android:layout_centerInParent="true"
+        app:cs_circle_color="#9b9b9b"
+        app:cs_circle_progress_color="@color/white"
+        app:cs_circle_stroke_width="6dp"
+        app:cs_circle_style="round"
+        app:cs_circle_x_radius="0dp"
+        app:cs_circle_y_radius="0dp"
+        app:cs_disable_pointer="false"
+        app:cs_disable_progress_glow="true"
+        app:cs_lock_enabled="true"
+        app:cs_maintain_equal_circle="true"
+        app:cs_max="100"
+        app:cs_move_outside_circle="true"
+        app:cs_negative_enabled="false"
+        app:cs_pointer_alpha_ontouch="5"
+        app:cs_pointer_angle="0"
+        app:cs_pointer_color="@color/white"
+        app:cs_pointer_stroke_width="20dp"
+        app:cs_use_custom_radii="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_duracion"
+        android:layout_width="62dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="516dp"
+        android:gravity="center"
+        android:text="@string/duracion"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_contador"
+        android:layout_width="66dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="516dp"
+        android:gravity="center"
+        android:text="@string/duracion"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
